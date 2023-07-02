@@ -31,6 +31,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
+i {
+  font-style: italic;
+}
 body {
   line-height: 1;
   width: 100vw;
@@ -57,11 +60,27 @@ table {
 body {
   display: flex;
   flex-direction: row;
+  background-color: whitesmoke;
 }
 
 a {
   color: inherit;
   font-family: inherit;
+}
+
+.flex-h {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-v {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;
+  gap: 30px; 
 }
 
 #left-body {
@@ -91,4 +110,12 @@ a {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   margin: 15px;
+}
+
+#right-body {
+}
+
+#signup-box {
+  background-color: white;
+  box-shadow: 3px 3px 3px lightgray;
 }
