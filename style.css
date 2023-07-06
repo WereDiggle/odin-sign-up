@@ -31,6 +31,11 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
+
+html {
+  font-family:Arial, Helvetica, sans-serif;
+}
+
 i {
   font-style: italic;
 }
@@ -56,6 +61,13 @@ table {
 }
 
 /* My CSS starts here */
+
+@font-face {
+  font-family: 'norse';
+  src: url("./Norse-Bold.otf");
+  src: url("./Norse-Bold.otf") format("opentype");
+  src: url("./Norse-Bold.otf") format("truetype");
+}
 
 body {
   display: flex;
@@ -101,6 +113,7 @@ a {
   justify-content: center;
   background-color:rgba(0, 0, 0, 0.5);
   font-size: 80px;
+  font-family: "norse", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 #logo-container > img {
   height: 100px;
@@ -112,10 +125,91 @@ a {
   margin: 15px;
 }
 
-#right-body {
+#right-body>p:last-child>a {
+  text-decoration: none;
+  color:#596D48;
+  font-weight: bold;
+}
+
+#right-body>p:first-child {
+  padding-bottom: 40px;
+}
+
+#right-body>p {
+  margin: 0px 40px;
+}
+
+#right-body>form>button[type="submit"] {
+  margin: 30px 40px 0px;
+  background-color: #596D48;
+  color: white;
+  width: 200px;
+  height: 50px;
+  font-weight: bold;
+  font-size:large;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 3px 3px lightgray;
+}
+
+#right-body>form>button[type="submit"]:active {
+  transform: translateY(3px);
+  box-shadow: 0px 0px 0px lightgray;
 }
 
 #signup-box {
   background-color: white;
-  box-shadow: 3px 3px 3px lightgray;
+  box-shadow: 0px 3px 3px lightgray;
+  padding: 20px 40px;
+  gap: 20px;
+  font-size: small;
+}
+
+input {
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  margin: 2px 0px;
+  height: 25px;
+  width: 250px;
+}
+
+input:focus,
+input:focus-visible {
+  border: 1px solid blue;
+  outline: none;
+  box-shadow: 0px 3px 3px lightgray;
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+
+#confirm-password-container {
+  position: relative;
+}
+
+#confirm_user_password + p {
+  color: red;
+  font-size: smaller;
+  position: absolute;
+  top: 50px;
+}
+
+#confirm_user_password + p {
+  color: red;
+  font-size: smaller;
+}
+
+#signup-box>div {
+  gap: 60px;
+}
+
+#signup-box>p {
+  font-weight: bold;
+  font-size: x-large;
+}
+
+#entry-paragraph {
+  font-size: x-large;
+  font-weight: bold;
 }
